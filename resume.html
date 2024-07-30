@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="recv.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Resume </title>
+</head>
+<body>
+    <div class="pg">
+
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">My Journey</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="work.html"> Work</a></li>
+            </ul>
+        </nav>
+
+        <img src="Graphic Design.jpg" id="resumepic">
+
+            <div>
+                <button class="download-res">  <a href="Resume(om dhamangaonkar).pdf" download class="down-btn">Download CV</a></button>
+            </div>
+
+    
+    </div>   
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Get the current page URL path
+    var currentPage = window.location.pathname;
+
+    // Get all the nav links
+    var navLinks = document.querySelectorAll(".navbar li a");
+
+    // Loop through the links
+    navLinks.forEach(function(link) {
+        // Create a URL object to compare paths correctly
+        var linkPath = new URL(link.href).pathname;
+
+        // If the paths match, add the active class
+        if (currentPage === linkPath) {
+            link.classList.add("active");
+        }
+    });
+});
+
+    </script>    
+</body>
+</html>
